@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Glovery } from "helpers/Glovery.js"
 import Text from "antd/lib/typography/Text";
-import heros from "../image/Glovery.png"
+import GloveryImg from "../image/Glovery.png"
 
 const styles = {
   content: {
@@ -50,7 +50,7 @@ function Home ({ inputValue, setInputValue }) {
             <br/>
             {Glovery[0].title}
             <br/><br/>
-            <img src={heros} width="480" height="280"/>
+            <img src={GloveryImg} width="480" height="280"/>
             <br />
             <br />
             {Glovery[0].companyObjective}

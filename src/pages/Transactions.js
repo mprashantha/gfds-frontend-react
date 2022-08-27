@@ -185,7 +185,10 @@ function Transactions() {
       render: (text, record) => (
         <Space size="middle">
           <span style={{ justifyContent: "center" }}>
-            <Button onClick={() => confirmDelivery(record.transactionId)}>Confirm</Button>
+            {!getConfirmation(record.transactionId) && (
+              <Button onClick={() => confirmDelivery(record.transactionId)}>Confirm</Button>
+            )}
+            {getConfirmation(record.transactionId) && <div>Confirmed</div>}
           </span>
         </Space>
       ),
